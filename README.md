@@ -1,5 +1,7 @@
 📌 Blog Yorum Sitesi
-Bu proje, ASP.NET MVC kullanılarak geliştirilmiş bir blog yorum sitesidir. Kullanıcılar blog yazıları oluşturabilir, yayınlayabilir ve diğer kullanıcıların yazılarına yorum yapabilirler.
+
+Bu proje, ASP.NET MVC kullanılarak geliştirilmiş bir blog yorum sitesidir. 
+Kullanıcılar blog yazıları oluşturabilir, yayınlayabilir ve diğer kullanıcıların yazılarına yorum yapabilirler.
 
 🚀 Özellikler
 
@@ -12,6 +14,7 @@ Bu proje, ASP.NET MVC kullanılarak geliştirilmiş bir blog yorum sitesidir. Ku
 ✅ Yönetici paneli ile kullanıcı ve içerik yönetimi
 
 ✅ Mobil uyumlu, responsive tasarım
+
 
 🛠 Kullanılan Teknolojiler
 
