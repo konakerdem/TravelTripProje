@@ -1,35 +1,41 @@
 ﻿@using TravelTripProje.Models.Siniflar
-@model List<Blog> 
+@model List<Blog>
 @{
     Layout = null;
 }
+<style>
+
+
+</style>
 
 <div class="padding1">
     <h4>En Beğendiğim Yerler</h4>
+
     <div class="box-left">
-        <div class="bot-img">
-            <img src="~/web/images/pic3.jpg" alt="" />
-        </div>
-        <div class="bot-desc">
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet </p>
-        </div>
-        <div class="clear"></div>
-        <div class="bot-img">
-            <img src="~/web/images/pic7.jpg" alt="" />
-        </div>
-        <div class="bot-desc">
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet </p>
-        </div>
-        <div class="clear"></div>
-        <div class="bot-img">
-            <img src="~/web/images/pic8.jpg" alt="" />
-        </div>
-        <div class="bot-desc">
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet </p>
-        </div>
-        <div class="clear"></div>
+        @foreach (var x in Model)
+        {
+           <div class="bot-title">
+               <h6>@x.Baslik</h6>
+           </div>
+            <div class="bot-img">
+                <img src="@x.BlogImage" alt="" />
+            </div>
+            <div class="bot-desc">
+                @{
+                    var maxLength = 70;
+                    var aciklama = x.Aciklama.Length > maxLength
+                        ? x.Aciklama.Substring(0, x.Aciklama.Substring(0, maxLength).LastIndexOf(" ")) + "..."
+                        : x.Aciklama;
+                }
+                <p>@aciklama   <a  href="/Blog/BlogDetay/@x.ID" style="font-weight:bold"> <br />devamını oku...</a></p>
+
+            </div>
+            <div class="clear"></div>
+        }
     </div>
-    <div class="box1-left">
+</div>
+
+@*<div class="box1-left">
         <div class="bot-img">
             <img src="~/web/images/pic9.jpg" alt="" />
         </div>
@@ -51,5 +57,5 @@
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet </p>
         </div>
         <div class="clear"></div>
-    </div>
-</div>
+    </div>*@
+

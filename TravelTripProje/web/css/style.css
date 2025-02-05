@@ -896,3 +896,10 @@ h2 {
     width: 285px;
 }
 }
+
+bot-title h6 {
+	color: #a2365a;
+	font-size: 15px;
+	margin: 15px 0;
+	font-weight: bold;
+}
