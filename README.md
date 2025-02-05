@@ -1,4 +1,4 @@
-📌 Blog Yorum Sitesi
+📌 TravelTripProje
 
 Bu proje, ASP.NET MVC kullanılarak geliştirilmiş bir blog yorum sitesidir. 
 Kullanıcılar blog yazıları oluşturabilir, yayınlayabilir ve diğer kullanıcıların yazılarına yorum yapabilirler.
