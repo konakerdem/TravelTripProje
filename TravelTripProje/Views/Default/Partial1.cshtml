@@ -1,10 +1,10 @@
 ﻿
+@using TravelTripProje.Models.Siniflar
+@model List<Blog>
+
 @{
     Layout = null;
 }
-
-@using TravelTripProje.Models.Siniflar
-@model List<Blog>
 
 
 
@@ -12,44 +12,26 @@
 
     @foreach (var x in Model)
     {
-        <div class="left">
+        <div class="left" style="width:29%;float:left;" >
             <div class="bot-left">
-                <img src="~/web/images/pic.jpg" alt="" />
+                <img src="@x.BlogImage" alt="" />
             </div>
             <div class="left-text">
                 <h4>@x.Baslik</h4>
-                <span class="doller">@x.Tarih</span>
+                <span class="doller">@x.Tarih.ToString("dd.MM.yyyy")</span> @*Tarih Formatı *@
                 <p>
+                    @x.Aciklama.Substring(0,70) @* 0 ' dan 70.karaktere kadar alır *@
                 </p>
                 <p>
                     <a href="/Blog/BlogDetay/@x.ID"><span class="read">Devamını Oku >>  </span></a>
                 </p>
             </div>
-
         </div>
-
 
     }
 
 
-    @*<div class="right">
-            <div class="bot-left">
-                <img src="~/web/images/pic2.jpg" alt="" />
-            </div>
-            <div class="left-text">
-                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
-                <span class="doller">$924.99</span>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum eius minus eligendi rerum aspernatur fugiat quas, provident officiis, quo explicabo ipsam facilis cumque, quod iste.
-                </p>
-                <p>
-                    <a href="#"><span class="read">Read More</span></a>
-                </p>
-            </div>
-
-        </div>*@
-
-
+    <div class="clear"></div>
 
 
 </div>
